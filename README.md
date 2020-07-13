@@ -1,6 +1,6 @@
 # GNNGuard: Defending Graph Neural Networksagainst Adversarial Attacks
 
-#### Author: [Xiang Zhang](http://xiangzhang.info/) (xiang_zhang@hms.harvard.edu) [Marinka Zitnik](https://zitniklab.hms.harvard.edu/) (marinka@hms.harvard.edu) 
+#### Author: [Xiang Zhang](http://xiangzhang.info/) (xiang_zhang@hms.harvard.edu), [Marinka Zitnik](https://zitniklab.hms.harvard.edu/) (marinka@hms.harvard.edu) 
 
 #### [Project website]()
 
@@ -31,12 +31,12 @@ The GNNGuard is evluated under three typical adversarial attacks including **Dir
 
 For example, to check the performance of GCN without defense under direct targeted attack, run the following code:
 ```
-python Nettack-Di.py --dataset Cora  --GNNGuard False
+python Nettack-Di.py --dataset Cora --modelname GCN  --GNNGuard False
 ```
 
 Turn on the GNNGuard defense, run
 ```
-python Nettack-Di.py --dataset Cora  --GNNGuard True
+python Nettack-Di.py --dataset Cora --modelname GCN  --GNNGuard True
 ```
 
 *Note:* Please uncomment the defense models (Line 144 for Nettack-Di.py) to test different defense models.
