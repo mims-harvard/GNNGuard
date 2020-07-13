@@ -15,13 +15,13 @@ Deep learning methods for graphs achieve remarkable performance on many tasks. H
 
 
 <p align="center">
-<img src="https://github.com/mims-harvard/GNNGuard/images/GNNGuard.png" width="600" align="center">
+<img src="https://github.com/mims-harvard/GNNGuard/blob/master/images/GNNGuard.png" width="600" align="center">
 </p>
 
 The key idea of GNNGuard is to detect and quantify the relationship between the graph structure and node features, if one exists, and then exploit that relationship to mitigate negative effects of the attack. GNNGUARD uses network theory of homophily to learn how best assign higher weights to edges connecting similar nodes while pruning edges between unrelated nodes. In specific, instead of the neural message passing of typical GNN (shown as **A**), GNNGuard (**B**) controls the message stream such as blocking the message from irrelevent neighbors but strengthening messages from highly-related ones. 
   
 <p align="center">
-<img src="https://github.com/mims-harvard/GNNGuard/images/workflow_2.png" width="800" align="center">
+<img src="https://github.com/mims-harvard/GNNGuard/blob/master/images/workflow_2.png" width="800" align="center">
 </p>
 
 ### Running the code
