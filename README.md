@@ -6,7 +6,7 @@
 
 ## Overview
 
-This repository contains python codes and datasets necessary to run the GNNGuard algorithm. GNNGuard is a general defense approach against a variety of poisoning adversarial attacks that perturb the discrete graph structure. GNNGuard can be straightforwardly incorporated into any GNN models to prevent the misclassification caused by poisoning adversarial attacks on graphs. See our [paper](https://arxiv.org/abs/2006.08149) for details on the algorithm. 
+This repository contains python codes and datasets necessary to run the GNNGuard algorithm. GNNGuard is a general defense approach against a variety of poisoning adversarial attacks that perturb the discrete graph structure. GNNGuard can be straightforwardly incorporated into any GNN models to prevent the misclassification caused by poisoning adversarial attacks on graphs. Please see our [paper](https://arxiv.org/abs/2006.08149) for more details on the algorithm. 
   
 
 ## Key Idea of GNNGuard
@@ -76,11 +76,12 @@ python setup.py install
 ```
 python setup.py install
 ```
-2. We extend the original DeepRobust from single GCN to multiplye GNN variants including GAT, GIN, Jumping Knowledge, and GCN-SAINT. After installing DeepRobust, please replace the origininal folder `DeepRobust-master/deeprobust/graph/defense` by the provided `defense` folder!
+2. We extend the original DeepRobust from single GCN to multiplye GNN variants including GAT, GIN, Jumping Knowledge, and GCN-SAINT. After installing DeepRobust, please replace the origininal folder `DeepRobust-master/deeprobust/graph/defense` by the `defense` folder that provided in our repository!
 
-3. To better plugin GNNGuard to geometric codes, we slightly revised some functions in geometric. Please use the three files under provided `nn/conv/` to replace the corresponding files in the installed geometric folder (for example, the folder path could be `/home/username/.local/lib/python3.5/site-packages/torch_geometric/nn/conv/`). 
+3. To better plugin GNNGuard to geometric codes, we slightly revised some functions in geometric. Please use the three files under our provided `nn/conv/` to replace the corresponding files in the installed geometric folder (for example, the folder path could be `/home/username/.local/lib/python3.5/site-packages/torch_geometric/nn/conv/`). 
 
-*Note:* Please install the corresponding CUDA versions if you are using GPU.
+*Note:* 1). Don't forget to backup all the original files when you replacing anything, in case you need them at other places!  2). Please install the corresponding CUDA versions if you are using GPU.
+
 
 ## Datasets
 Here we provide the datasets (including Cora, Citeseer, ogbn-arxiv, and DP) used in GNNGuard paper.
