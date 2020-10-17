@@ -6,7 +6,7 @@
 
 ## Overview
 
-This repository contains python codes and datasets necessary to run the GNNGuard algorithm. GNNGuard is a general defense approach against a variety of poisoning adversarial attacks that perturb the discrete graph structure. GNNGuard can be straightforwardly incorporated into any GNN models to prevent the misclassification caused by adversarial attacks on graphs. See our [paper](https://arxiv.org/abs/2006.08149) for details on the algorithm. 
+This repository contains python codes and datasets necessary to run the GNNGuard algorithm. GNNGuard is a general defense approach against a variety of poisoning adversarial attacks that perturb the discrete graph structure. GNNGuard can be straightforwardly incorporated into any GNN models to prevent the misclassification caused by poisoning adversarial attacks on graphs. See our [paper](https://arxiv.org/abs/2006.08149) for details on the algorithm. 
   
 
 ## Key Idea of GNNGuard
@@ -18,7 +18,7 @@ Deep learning methods for graphs achieve remarkable performance on many tasks. H
 <img src="https://github.com/mims-harvard/GNNGuard/blob/master/images/GNNGuard.png" width="600" align="center">
 </p>
 
-The key idea of GNNGuard is to detect and quantify the relationship between the graph structure and node features, if one exists, and then exploit that relationship to mitigate negative effects of the attack. GNNGUARD uses network theory of homophily to learn how best assign higher weights to edges connecting similar nodes while pruning edges between unrelated nodes. In specific, instead of the neural message passing of typical GNN (shown as **A**), GNNGuard (**B**) controls the message stream such as blocking the message from irrelevent neighbors but strengthening messages from highly-related ones. 
+The key idea of GNNGuard is to detect and quantify the relationship between the graph structure and node features, if one exists, and then exploit that relationship to mitigate negative effects of the attack. GNNGUARD learns how to best assign higher weights to edges connecting similar nodes while pruning edges between unrelated nodes. In specific, instead of the neural message passing of typical GNN (shown as **A**), GNNGuard (**B**) controls the message stream such as blocking the message from irrelevent neighbors but strengthening messages from highly-related ones. Importantly, we are the first model that can defend heterophily graphs (\eg, with structural equivalence) while all the existing defenders only considering homophily graphs. 
   
 <p align="center">
 <img src="https://github.com/mims-harvard/GNNGuard/blob/master/images/workflow_2.png" width="800" align="center">
@@ -47,17 +47,12 @@ python Nettack-Di.py --dataset Cora  --modelname GCN --GNNGuard True
 If you find *GNNGuard* useful for your research, please consider citing this paper]:
 ```
 @inproceedings{zhang2020gnnguard,
-title     = {GNNGuard: Defending Graph Neural Networksagainst Adversarial Attacks},
+title     = {GNNGuard: Defending Graph Neural Networks against Adversarial Attacks},
 author    = {Zhang, Xiang and Zitnik, Marinka},
 booktitle = {NeurIPS},
 year      = {2020}
 }
 ```
-
-## Miscellaneous
-
-Please send any questions you might have about the code and/or the algorithm to <xiang_zhang@hms.harvard.edu>.
-
 
 ## Requirements 
 
@@ -98,6 +93,12 @@ dataset = PygNodePropPredDataset(name = 'ogbn-arxiv')
 More details about ogbn-arxiv dataset can be found [here](https://ogb.stanford.edu/docs/nodeprop/#ogbn-arxiv).
 
 Find more details about Disease Pathway dataset at [here](http://snap.stanford.edu/pathways/).
+
+For graphs with structural roles, a prominent type of heterophily, we calculate the nodes' similarity using graphlet degree vector instead of node embedding. The graphlet degree vector is generated/counted based on the Orbit Counting Algorithm ([Orca](https://file.biolab.si/biolab/supp/orca/)).
+
+## Miscellaneous
+
+Please send any questions you might have about the code and/or the algorithm to <xiang_zhang@hms.harvard.edu>.
 
 ## License
 
