@@ -1,4 +1,4 @@
-# GNNGuard: Defending Graph Neural Networksagainst Adversarial Attacks
+# GNNGuard: Defending Graph Neural Networks against Adversarial Attacks
 
 #### Author: [Xiang Zhang](http://xiangzhang.info/) (xiang_zhang@hms.harvard.edu), [Marinka Zitnik](https://zitniklab.hms.harvard.edu/) (marinka@hms.harvard.edu) 
 
