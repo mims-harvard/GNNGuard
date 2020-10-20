@@ -2,7 +2,7 @@
 
 #### Author: [Xiang Zhang](http://xiangzhang.info/) (xiang_zhang@hms.harvard.edu), [Marinka Zitnik](https://zitniklab.hms.harvard.edu/) (marinka@hms.harvard.edu) 
 
-#### [Project website]()
+#### [Project website](https://zitniklab.hms.harvard.edu/projects/GNNGuard)
 
 ## Overview
 
