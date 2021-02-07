@@ -44,7 +44,7 @@ python Nettack-Di.py --dataset Cora  --modelname GCN --GNNGuard True
 
 ## Citing
 
-If you find *GNNGuard* useful for your research, please consider citing this paper]:
+If you find *GNNGuard* useful for your research, please consider citing this paper:
 ```
 @inproceedings{zhang2020gnnguard,
 title     = {GNNGuard: Defending Graph Neural Networks against Adversarial Attacks},
