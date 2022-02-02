@@ -6,7 +6,7 @@
 
 ## Overview
 
-This repository contains python codes and datasets necessary to run the GNNGuard algorithm. GNNGuard is a general defense approach against a variety of poisoning adversarial attacks that perturb the discrete graph structure. GNNGuard can be straightforwardly incorporated into any GNN models to prevent the misclassification caused by poisoning adversarial attacks on graphs. Please see our [paper](https://arxiv.org/abs/2006.08149) for more details on the algorithm. 
+This repository contains python codes and datasets necessary to run the GNNGuard algorithm. GNNGuard is a general defense approach against a variety of poisoning adversarial attacks that perturb the discrete graph structure. GNNGuard can be straightforwardly incorporated into any GNN models to prevent the misclassification caused by poisoning adversarial attacks on graphs. Please see our paper ([arxiv](https://arxiv.org/abs/2006.08149), [NeurIPS](https://papers.nips.cc/paper/2020/hash/690d83983a63aa1818423fd6edd3bfdb-Abstract.html)) for more details on the algorithm. 
   
 
 ## Key Idea of GNNGuard
